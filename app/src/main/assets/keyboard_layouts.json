@@ -170,7 +170,7 @@
   "custom-keyboard-mechanics": "uhtz_titan/titan_keyboard_mechanics",
   "device-model-regexp" : "A-Gold Titan"
 }, {
-  "options-name" : "Blackberry Key1|2 Español (Modo Alt)",
+  "options-name" : "Blackberry Key1|2 Espanol (Modo Alt)",
   "keyboard-mapping" : "bb_key_1_2/español_modo_alt_hw",
   "icon-lowercase" : "ic_eng_small",
   "icon-first-shift" : "ic_eng_shift_first",
