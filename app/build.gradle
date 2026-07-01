@@ -5,20 +5,7 @@ plugins {
 
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('d:\\Programming\\keystores\\keystore2.jks')
-            storePassword 'qwerty'
-            keyAlias 'key0'
-            keyPassword 'qwerty'
-        }
-        release {
-            storeFile file('d:\\Programming\\keystores\\keystore2.jks')
-            storePassword 'qwerty'
-            keyAlias 'key0'
-            keyPassword 'qwerty'
-        }
-    }
+
 
     lintOptions {
         disable 'ExpiredTargetSdkVersion'
@@ -63,7 +50,6 @@ android {
          */
 
         //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.debug
     }
     applicationVariants.all { variant ->
         variant.outputs.all {
@@ -72,18 +58,16 @@ android {
         }
     }
 
-    buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-            debuggable true
-        }
-        release {
-            signingConfig signingConfigs.release
-            debuggable false
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
+buildTypes {
+    debug {
+        debuggable true
     }
+    release {
+        debuggable false
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+}
 
     compileOptions {
         coreLibraryDesugaringEnabled true
